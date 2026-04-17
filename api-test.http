@@ -1,0 +1,54 @@
+### Base URL
+@baseUrl = http://localhost:8080/api
+
+### Health Check
+GET {{baseUrl}}/health
+
+### Get All Properties
+GET {{baseUrl}}/properties
+
+### Get Property by ID
+GET {{baseUrl}}/properties/1
+
+### Create New Property
+POST {{baseUrl}}/properties
+Content-Type: application/json
+
+{
+  "address": "123 Main Street",
+  "city": "New York",
+  "state": "NY",
+  "zipCode": "10001",
+  "price": 500000,
+  "bedrooms": 3,
+  "bathrooms": 2,
+  "squareFeet": 2500
+}
+
+### Update Property
+PUT {{baseUrl}}/properties/1
+Content-Type: application/json
+
+{
+  "price": 550000,
+  "bedrooms": 4
+}
+
+### Delete Property
+DELETE {{baseUrl}}/properties/1
+
+### Get AI Price Prediction
+POST {{baseUrl}}/ai/predict-price
+Content-Type: application/json
+
+{
+  "address": "456 Oak Avenue",
+  "city": "San Francisco",
+  "state": "CA",
+  "squareFeet": 3000,
+  "bedrooms": 3,
+  "bathrooms": 2
+}
+
+### Get AI Property Recommendations
+GET {{baseUrl}}/ai/recommendations?maxPrice=600000&minBedrooms=2

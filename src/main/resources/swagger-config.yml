@@ -1,0 +1,12 @@
+swagger:
+  enabled: true
+  title: Real Estate Platform API
+  description: API documentation for Real Estate Platform with AI capabilities
+  version: 1.0.0
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
+  api-docs:
+    path: /v3/api-docs
